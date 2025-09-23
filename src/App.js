@@ -5,6 +5,7 @@ import Hero from "./sections/Hero";
 import CSProjects from "./sections/CSProjects";
 import CreativeProjects from "./sections/CreativeProjects";
 import Film from "./sections/Film";
+import About from "./sections/About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/cs-projects" element={<CSProjects />} />
         <Route path="/creative-projects" element={<CreativeProjects />} />
         <Route path="/film" element={<Film />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>

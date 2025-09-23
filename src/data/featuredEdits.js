@@ -4,6 +4,10 @@ const featuredEdits = [
     url: "https://drive.google.com/file/d/15y_5nZE-6RDYerH_Lnja-lOqsq_m0h3r/preview"
   },
   {
+    title: "2024 Wrapped",
+    url: "https://drive.google.com/file/d/15o-xQy0n1ZxblbLuc8yW9pIm2jLAUZK2/preview"
+  },
+  {
     title: "Scream VI | Here",
     url: "https://www.youtube.com/embed/HkgYZgsi7vo?si=Pqh9k8fpRBGTOEKV"
   },
@@ -26,10 +30,6 @@ const featuredEdits = [
   {
     title: "Wednesday & Enid | Dress",
     url: "https://www.youtube.com/embed/XGpgEqyZkXw?si=VSopog8ZYkfG-IAz"
-  },
-  {
-    title: "Pitch Perfect | Can't Stop the Feeling",
-    url: "https://www.youtube.com/embed/T_OaFfjk7HM?si=wpsYa4smN4XJQ2LY"
   }
 ];
 
