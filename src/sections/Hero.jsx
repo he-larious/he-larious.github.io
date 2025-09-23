@@ -6,7 +6,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <h1>Helena He</h1>
-        <p>CS • Film • Creative Projects</p>
+        <p>CS • Film • Creative Technology</p>
         <Link to="/cs-projects" className="hero-button">
           See My Work
         </Link>
