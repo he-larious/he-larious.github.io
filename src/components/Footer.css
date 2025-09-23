@@ -1,0 +1,25 @@
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #111;
+  color: var(--color-light-gray);
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--color-light-gray); /* same accent color as navbar hover */
+}

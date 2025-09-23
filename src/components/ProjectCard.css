@@ -1,0 +1,70 @@
+.project-card {
+  display: flex;
+  align-items: center; /* centers image + text vertically */
+  background: var(--color-dark-gray);
+  color: var(--color-light-gray);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(158, 206, 106, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-width: 500px;
+  padding: 1rem 2rem; /* add breathing space */
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(158, 206, 106, 0.5);
+}
+
+.project-image {
+  width: 120px;   /* 👈 small thumbnail size */
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  flex-shrink: 0; /* don’t let it collapse */
+  margin-right: 2rem; /* spacing between image + text */
+  background: #000;
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center text vertically */
+}
+
+.project-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  color: var(--color-accent);
+}
+
+.project-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: var(--color-light-gray);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  background: var(--color-accent);
+  color: var(--color-base);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.project-links a:hover {
+  background: var(--color-light-gray);
+  transform: scale(1.05);
+}
