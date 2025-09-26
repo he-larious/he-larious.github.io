@@ -19,3 +19,18 @@
   gap: 1rem;
   justify-content: center;
 }
+
+/* On small screens, show 1 card per row */
+@media (max-width: 768px) {
+  #cs-projects {
+    padding: 2rem 1rem;      /* reduce horizontal padding on small screens */
+  }
+
+  #cs-projects .project-grid {
+    grid-template-columns: 1fr;        /* single column */
+  }
+
+  #cs-projects h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -8,7 +8,7 @@
   overflow: hidden;
   box-shadow: 0 0 12px rgba(158, 206, 106, 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  min-width: 500px;
+  width: 100%;
   padding: 1rem 2rem; /* add breathing space */
 }
 
@@ -67,4 +67,43 @@
 .project-links a:hover {
   background: var(--color-light-gray);
   transform: scale(1.05);
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .project-card {
+    display: flex;
+    flex-direction: column;       /* stack items vertically */
+    align-items: center;          /* center items horizontally */
+    padding: 1rem;
+    text-align: left;
+  }
+
+  /* Reorder: move title above the image */
+  .project-content h3 {
+    order: -1;                    /* pull title above the image */
+    text-align: center;           /* center title text */
+    margin-bottom: 1rem;
+  }
+
+  .project-image {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem;          /* center image and give space below */
+    border-radius: 8px;
+  }
+
+  .project-content {
+    width: 100%;
+    text-align: left;             /* keep description left-aligned */
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 }

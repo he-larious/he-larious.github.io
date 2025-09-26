@@ -101,3 +101,9 @@
 .film-carousel .slick-list { 
     overflow: visible; 
 }
+
+@media (max-width: 768px) {
+  #film-projects .project-grid {
+    grid-template-columns: 1fr;           /* stack vertically */
+  }
+}

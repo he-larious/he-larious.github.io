@@ -1,7 +1,7 @@
 const education = [
   {
     school: "Columbia University",
-    date: "Aug 2024 - Sep 2025",
+    date: "Sep 2024 - Aug 2025",
     degree: "MS in Computer Science",
     logo: "/assets/logos/columbia.png"
   },
