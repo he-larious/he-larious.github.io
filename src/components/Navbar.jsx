@@ -1,12 +1,33 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
+
+  // Close menu on outside click
+  useEffect(() => {
+    // listen in capture phase so we catch the click before it reaches the menu
+    const handleClickOutside = (e) => {
+      if (isOpen && navRef.current && !navRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside, true);
+    };
+  }, [isOpen]);
+
+  // Close menu when a link is clicked
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navRef}>
       <div className="logo">
         <Link to="/">Helena He</Link>
       </div>
@@ -20,10 +41,10 @@ function Navbar() {
       </div>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <li><Link to="/cs-projects">CS</Link></li>
-        <li><Link to="/creative-projects">Creative</Link></li>
-        <li><Link to="/film">Film</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="/cs-projects" onClick={handleLinkClick}>CS</Link></li>
+        <li><Link to="/creative-projects" onClick={handleLinkClick}>Creative</Link></li>
+        <li><Link to="/film" onClick={handleLinkClick}>Film</Link></li>
+        <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
       </ul>
     </nav>
   );

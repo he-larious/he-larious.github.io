@@ -79,7 +79,8 @@
     text-align: left;
     max-width: 100%;
     box-sizing: border-box;      /* <-- critical */
-    padding: 1rem;   
+    padding: 1rem;
+    margin: 0;
   }
 
   /* Reorder: move title above the image */

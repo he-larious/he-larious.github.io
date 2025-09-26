@@ -126,4 +126,38 @@
   transform: scale(1.05);
 }
 
+/* Mobile / narrow screen layout */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;            /* already done */
+  }
 
+  .about-card {
+    flex-direction: row;                   /* keep logo on the left */
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .about-card-header {
+    display: flex;
+    flex-direction: column;                /* stack school and date */
+    align-items: flex-start;               /* left-align both */
+    gap: 0.2rem;                            /* small space between them */
+    margin-bottom: 0.4rem;
+  }
+
+  .about-card-header h4 {
+    font-size: 1rem;                        /* slightly smaller for mobile */
+    margin: 0;
+  }
+
+  .about-card .date {
+    font-size: 0.9rem;
+    white-space: normal;                    /* allow wrapping if needed */
+    color: var(--color-secondary);
+  }
+
+  .about-card-content p {
+    font-size: 0.95rem;                      /* slightly smaller body text */
+  }
+}

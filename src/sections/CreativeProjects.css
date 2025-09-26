@@ -31,6 +31,10 @@
   color: var(--color-accent);
 }
 
+#creative-projects .project-links {
+  justify-content: center;
+}
+
 /* 🔹 Grid layout for Blender items */
 .blender-grid {
   display: grid;
@@ -66,9 +70,10 @@
 
   #creative-projects .project-grid {
     grid-template-columns: 1fr;   /* ← stack into one column */
+    justify-content: stretch;
   }
 
-  #creative-projects h2 {
-    font-size: 1.5rem;
+  .blender-grid {
+    grid-template-columns: 1fr;       /* stack single column */
   }
 }

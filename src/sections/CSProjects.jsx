@@ -5,7 +5,7 @@ import "./CSProjects.css";
 function CSProjects() {
   return (
     <section id="cs-projects">
-      <h2>Computer Science Projects</h2>
+      <h2>CS Projects</h2>
       <div className="project-grid">
         {csProjects.map((proj, idx) => (
           <ProjectCard key={idx} {...proj} />
