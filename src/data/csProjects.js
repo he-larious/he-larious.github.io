@@ -1,7 +1,7 @@
 const csProjects = [
   {
     title: "The Humor Project",
-    description: "Building the world's first funny AI: users upload images and receive AI-generated funny captions.",
+    description: "Helped build the world's first funny AI. Users upload images and receive AI-generated funny captions.",
     image: "/assets/cs/crackd.svg",
     links: [
       { label: "Visit", url: "https://crackd.ai" }

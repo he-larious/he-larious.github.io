@@ -27,7 +27,7 @@
 #creative-projects h3 {
   font-size: 1.4rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--color-accent);
 }
 
@@ -53,7 +53,6 @@
 }
 
 .blender-item:hover {
-  transform: translateY(-4px);
   box-shadow: 0 0 20px rgba(158, 206, 106, 0.5);
 }
 

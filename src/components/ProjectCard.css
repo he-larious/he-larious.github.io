@@ -13,7 +13,6 @@
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
   box-shadow: 0 0 20px rgba(158, 206, 106, 0.5);
 }
 
@@ -62,6 +61,9 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: background 0.25s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-links a:hover {

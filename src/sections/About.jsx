@@ -6,6 +6,11 @@ import skills from "../data/skills";
 function About() {
   return (
     <section id="about" className="about">
+        <header className="about-hero">
+            <h1>Helena He</h1>
+            <p>CS • Film • Creative Technology</p>
+        </header>
+
       <h2>About Me</h2>
 
       {/* Intro */}

@@ -29,7 +29,7 @@ function Navbar() {
   return (
     <nav className="navbar" ref={navRef}>
       <div className="logo">
-        <Link to="/">Helena He</Link>
+        Helena He
       </div>
 
       {/* Hamburger icon visible on mobile */}
@@ -41,10 +41,10 @@ function Navbar() {
       </div>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
         <li><Link to="/cs-projects" onClick={handleLinkClick}>CS</Link></li>
         <li><Link to="/creative-projects" onClick={handleLinkClick}>Creative</Link></li>
         <li><Link to="/film" onClick={handleLinkClick}>Film</Link></li>
-        <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
       </ul>
     </nav>
   );
