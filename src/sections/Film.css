@@ -93,36 +93,28 @@
   opacity: 1;
 }
 
+.mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-list .film-video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+}
+
+.video-title {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #444;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
-  .simple-carousel {
-    flex-direction: row;
-    gap: 0.5rem;
-    max-width: 100%;
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .film-video {
-    flex: 1 1 auto;
-    min-width: 100%;
-  }
-
-  .nav-btn {
-    flex: 0 0 auto;          /* don’t let buttons grow */
-  }
-
-  .nav-btn svg {
-    width: 32px;
-    height: 32px;
-  }
-
   #film-projects .project-grid {
     grid-template-columns: 1fr;           /* stack vertically */
-  }
-
-  .dot {
-    width: 7px;
-    height: 7px;
   }
 }

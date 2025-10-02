@@ -17,6 +17,14 @@ const filmProjects = [
       { label: "Instagram", url: "https://www.instagram.com/panikacake/" },
       { label: "TikTok", url: "https://www.tiktok.com/@he.larious" }
     ]
+  },
+  {
+    title: "Scream (OT7's Version)",
+    description:
+      "A comedic parody script reimagining Scream as a Christmas slasher set in New York City, starring my friends.",
+    links: [
+      { label: "Read Script", url: "https://docs.google.com/document/d/12ivYrz0k293XBm9cCyCbskskl3D4byhwbh_HomtWhYQ/edit?usp=sharing" }
+    ]
   }
 ];
 
