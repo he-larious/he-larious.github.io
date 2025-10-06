@@ -44,7 +44,6 @@ function Film() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
-              <p className="video-title">{edit.title}</p>
             </div>
           ))}
         </div>
