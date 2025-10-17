@@ -29,7 +29,9 @@ function Navbar() {
   return (
     <nav className="navbar" ref={navRef}>
       <div className="logo">
-        Helena He
+        <Link to="/" onClick={handleLinkClick}>
+          Helena He
+        </Link>
       </div>
 
       {/* Hamburger icon visible on mobile */}

@@ -1,0 +1,45 @@
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+  max-width: var(--max-width);
+  padding: 0 2rem;
+}
+
+.video-bg {
+  width: 100%;
+  max-width: 70%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--color-accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-bg:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 📱 Mobile responsiveness --- */
+@media (max-width: 768px) {
+  .video-container {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .video-bg {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}
+
+/* --- 🧠 Extra small screens (phones under ~480px) --- */
+@media (max-width: 480px) {
+  .video-bg {
+    border-width: 2px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  }
+}
