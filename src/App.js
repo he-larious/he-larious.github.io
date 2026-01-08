@@ -6,7 +6,7 @@ import CSProjects from "./sections/CSProjects";
 import CreativeProjects from "./sections/CreativeProjects";
 import Film from "./sections/Film";
 import About from "./sections/About";
-import HomeVideo from "./components/HomeVideo";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <ScrollToTop /> 
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomeVideo />} /> 
+        <Route path="/" element={<Home />} /> 
         <Route path="/cs-projects" element={<CSProjects />} />
         <Route path="/creative-projects" element={<CreativeProjects />} />
         <Route path="/film" element={<Film />} />

@@ -30,7 +30,7 @@ function Navbar() {
     <nav className="navbar" ref={navRef}>
       <div className="logo">
         <Link to="/" onClick={handleLinkClick}>
-          Helena He
+          HELENA HE
         </Link>
       </div>
 
@@ -43,10 +43,10 @@ function Navbar() {
       </div>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
+        <li><Link to="/about" onClick={handleLinkClick}>ABOUT</Link></li>
         <li><Link to="/cs-projects" onClick={handleLinkClick}>CS</Link></li>
-        <li><Link to="/creative-projects" onClick={handleLinkClick}>Creative</Link></li>
-        <li><Link to="/film" onClick={handleLinkClick}>Film</Link></li>
+        <li><Link to="/creative-projects" onClick={handleLinkClick}>CREATIVE</Link></li>
+        <li><Link to="/film" onClick={handleLinkClick}>FILM</Link></li>
       </ul>
     </nav>
   );

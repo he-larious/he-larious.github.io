@@ -1,0 +1,218 @@
+.home-video {
+  position: relative;
+  min-height: 70vh;
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #221437 0%,
+    #0d0d0d 60%,
+    #050505 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light-gray);
+  z-index: 2000;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-family: inherit;
+}
+
+.intro-frame {
+  position: relative;
+  text-align: center;
+  width: min(860px, 92vw);
+  aspect-ratio: 16 / 9;
+  padding: 3.2rem 2.8rem;
+  border: 1px solid var(--color-accent);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.intro-frame--video {
+  padding: 0;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+
+.intro-video {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  display: block;
+}
+
+.intro-audio {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid var(--color-accent);
+  padding: 0.45rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  z-index: 1;
+}
+
+.intro-audio:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.intro-line {
+  opacity: 0;
+  font-size: clamp(0.95rem, 2.2vw, 1.7rem);
+  font-weight: 500;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  animation: lineFade 2.2s ease forwards;
+  animation-delay: var(--line-delay);
+}
+
+.intro-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(6px);
+  margin-right: 0.35em;
+  animation: wordRise 0.35s ease forwards;
+  animation-delay: calc(var(--line-delay) + (var(--word-index) * 0.18s));
+}
+
+.intro-word:last-child {
+  margin-right: 0;
+}
+
+.intro-skip {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(13, 13, 13, 0.75);
+  color: var(--color-light-gray);
+  border: 1px solid var(--color-accent);
+  padding: 0.5rem 1.1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.intro-skip:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.scene-selection {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 4.5rem 0 6rem;
+  text-align: center;
+}
+
+.scene-header {
+  margin-bottom: 2.5rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.scene-card {
+  border: 1px solid var(--color-accent);
+  padding: 2.5rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-light-gray);
+  background: rgba(13, 13, 13, 0.6);
+}
+
+@keyframes lineFade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes wordRise {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-line {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .intro-word {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .scene-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .intro-overlay {
+    letter-spacing: 0.14em;
+    padding: 0 1rem;
+  }
+
+  .intro-line {
+    font-size: clamp(0.8rem, 3.6vw, 1.25rem);
+  }
+
+  .intro-skip,
+  .intro-audio {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.7rem;
+  }
+
+  .intro-skip {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .intro-audio {
+    bottom: 1rem;
+    right: 1rem;
+    left: auto;
+  }
+}

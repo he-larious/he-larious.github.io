@@ -27,10 +27,6 @@ a {
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--color-secondary);
-}
-
 body {
   margin: 0;
   background-color: var(--color-base);
