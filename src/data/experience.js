@@ -1,5 +1,13 @@
 const experience = [
   {
+    company: "Incoming @ 🤫",
+    logo: "boomboom.avif",
+    date: "Feb 2026 - Present",
+    role: "Software Engineer",
+    description:
+      "Top secret rn lol."
+  },
+  {
     company: "Routerr Health",
     logo: "/assets/logos/routerr.png",
     date: "May 2025 - Sep 2025",

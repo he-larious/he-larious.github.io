@@ -7,6 +7,15 @@ const csProjects = [
       { label: "Visit", url: "https://crackd.ai" }
     ]
   },
+   {
+    title: "Panem-et-Promptes",
+    description:
+      "A Retrieval-Augmented Generation q&a system where users can ask natural language questions about The Hunger Games.",
+    image: "/assets/cs/panem-et-promptes.png",
+    links: [
+      { label: "GitHub", url: "https://github.com/he-larious/panem-et-promptes" }
+    ]
+  },
   {
     title: "Flee the Factory",
     description: "An educational puzzle game teaching fundamental programming concepts such as functions, control flow, recursion, and data structures.",

@@ -19,6 +19,11 @@ const filmProjects = [
     ]
   },
   {
+    title: "Freelance Video Editor",
+    description:
+      "Editing short-form video content for creators and brands.",
+  },
+  {
     title: "Scream (OT7's Version)",
     description:
       "A comedic parody script reimagining Scream as a Christmas slasher set in New York City, starring my friends.",
