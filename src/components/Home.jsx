@@ -99,14 +99,31 @@ function Home() {
 
       {!showIntro && (
         <section className="scene-selection">
-          <div className="scene-header">
-            Scene Selection
+          <div className="scene-marquee">
+            <p className="scene-label">Scene Selection</p>
+            <div className="scene-divider" aria-hidden="true" />
           </div>
-          <div className="scene-grid">
-            <Link className="scene-card" to="/about">ABOUT</Link>
-            <Link className="scene-card" to="/cs-projects">CS</Link>
-            <Link className="scene-card" to="/creative-projects">CREATIVE</Link>
-            <Link className="scene-card" to="/film">FILM</Link>
+          <div className="scene-stage">
+            <div className="scene-screen" aria-hidden="true">
+              <div className="scene-screen-overlay" />
+              <div className="scene-preview-title">Helarious Archives</div>
+              <div className="scene-preview-subtitle">Select a reel to begin.</div>
+              <div className="scene-thumbs">
+                <div className="scene-thumb scene-thumb--about">ABOUT</div>
+                <div className="scene-thumb scene-thumb--cs">CS</div>
+                <div className="scene-thumb scene-thumb--creative">CREATIVE</div>
+                <div className="scene-thumb scene-thumb--film">FILM</div>
+              </div>
+            </div>
+            <div className="scene-menu">
+              <p className="scene-menu-title">Chapters</p>
+              <nav className="scene-list" aria-label="Scene selection">
+                <Link className="scene-link" to="/about">ABOUT</Link>
+                <Link className="scene-link" to="/cs-projects">CS</Link>
+                <Link className="scene-link" to="/creative-projects">CREATIVE</Link>
+                <Link className="scene-link" to="/film">FILM</Link>
+              </nav>
+            </div>
           </div>
         </section>
       )}
