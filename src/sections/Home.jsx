@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Clapperboard, Gem, Laptop, UserRound } from "lucide-react";
+import SceneMenuLink from "../components/SceneMenuLink";
+import SceneThumb from "../components/SceneThumb";
 import "./Home.css";
 
 function Home() {
@@ -7,6 +9,7 @@ function Home() {
   const [introPhase, setIntroPhase] = useState("text");
   const [introMuted, setIntroMuted] = useState(true);
   const [activeScene, setActiveScene] = useState("about");
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
     if (!showIntro) {
@@ -54,6 +57,51 @@ function Home() {
       ))}
     </p>
   );
+
+  const handleScenePointerDown = (scene) => (event) => {
+    if (event.pointerType === "touch") {
+      setIsTouch(true);
+      setActiveScene(scene);
+    }
+  };
+
+  const handleSceneClick = (scene) => (event) => {
+    if (isTouch && activeScene !== scene) {
+      event.preventDefault();
+      setActiveScene(scene);
+    }
+  };
+
+  const handleSceneFocus = (scene) => () => {
+    setActiveScene(scene);
+  };
+
+  const scenes = [
+    {
+      id: "about",
+      label: "ABOUT",
+      to: "/about",
+      Icon: UserRound,
+    },
+    {
+      id: "cs",
+      label: "CS",
+      to: "/cs-projects",
+      Icon: Laptop,
+    },
+    {
+      id: "creative",
+      label: "CREATIVE",
+      to: "/creative-projects",
+      Icon: Gem,
+    },
+    {
+      id: "film",
+      label: "FILM",
+      to: "/film",
+      Icon: Clapperboard,
+    },
+  ];
 
   return (
     <div className="home-video">
@@ -110,71 +158,35 @@ function Home() {
               <div className="scene-preview-title">Helarious Archives</div>
               <div className="scene-preview-subtitle">Select a reel to begin.</div>
               <div className="scene-thumbs">
-                <div className={`scene-thumb ${activeScene === "about" ? "is-active" : ""}`}>
-                  <span className="scene-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
-                      <path d="M5 20a7 7 0 0 1 14 0" />
-                    </svg>
-                  </span>
-                </div>
-                <div className={`scene-thumb ${activeScene === "cs" ? "is-active" : ""}`}>
-                  <span className="scene-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <rect x="7" y="7" width="10" height="10" rx="2" />
-                      <path d="M4 10h3M4 14h3M17 10h3M17 14h3M10 4v3M14 4v3M10 17v3M14 17v3" />
-                    </svg>
-                  </span>
-                </div>
-                <div className={`scene-thumb ${activeScene === "creative" ? "is-active" : ""}`}>
-                  <span className="scene-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <path d="m12 20 8-8-4-4-8 8-2 6 6-2Z" />
-                      <path d="m14 6 4 4" />
-                    </svg>
-                  </span>
-                </div>
-                <div className={`scene-thumb ${activeScene === "film" ? "is-active" : ""}`}>
-                  <span className="scene-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <rect x="3" y="8" width="18" height="12" rx="2" />
-                      <path d="M3 8h18M7 4l2 4M12 4l2 4M17 4l2 4" />
-                    </svg>
-                  </span>
-                </div>
+                {scenes.map((scene) => (
+                  <SceneThumb
+                    key={scene.id}
+                    isActive={activeScene === scene.id}
+                    to={scene.to}
+                    label={scene.label}
+                    Icon={scene.Icon}
+                    onMouseEnter={() => setActiveScene(scene.id)}
+                    onFocus={handleSceneFocus(scene.id)}
+                    onPointerDown={handleScenePointerDown(scene.id)}
+                    onClick={handleSceneClick(scene.id)}
+                  />
+                ))}
               </div>
             </div>
             <div className="scene-menu">
               <p className="scene-menu-title">Scenes</p>
               <nav className="scene-list" aria-label="Scene selection">
-                <Link
-                  className="scene-link"
-                  to="/about"
-                  onMouseEnter={() => setActiveScene("about")}
-                >
-                  ABOUT
-                </Link>
-                <Link
-                  className="scene-link"
-                  to="/cs-projects"
-                  onMouseEnter={() => setActiveScene("cs")}
-                >
-                  CS
-                </Link>
-                <Link
-                  className="scene-link"
-                  to="/creative-projects"
-                  onMouseEnter={() => setActiveScene("creative")}
-                >
-                  CREATIVE
-                </Link>
-                <Link
-                  className="scene-link"
-                  to="/film"
-                  onMouseEnter={() => setActiveScene("film")}
-                >
-                  FILM
-                </Link>
+                {scenes.map((scene) => (
+                  <SceneMenuLink
+                    key={scene.id}
+                    to={scene.to}
+                    label={scene.label}
+                    onMouseEnter={() => setActiveScene(scene.id)}
+                    onFocus={handleSceneFocus(scene.id)}
+                    onPointerDown={handleScenePointerDown(scene.id)}
+                    onClick={handleSceneClick(scene.id)}
+                  />
+                ))}
               </nav>
             </div>
           </div>
