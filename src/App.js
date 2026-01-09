@@ -6,7 +6,7 @@ import CSProjects from "./sections/CSProjects";
 import CreativeProjects from "./sections/CreativeProjects";
 import Film from "./sections/Film";
 import About from "./sections/About";
-import Home from "./components/Home";
+import Home from "./sections/Home";
 
 function App() {
   return (
