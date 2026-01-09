@@ -110,49 +110,37 @@ function Home() {
               <div className="scene-preview-title">Helarious Archives</div>
               <div className="scene-preview-subtitle">Select a reel to begin.</div>
               <div className="scene-thumbs">
-                <div
-                  className={`scene-thumb scene-thumb--about ${activeScene === "about" ? "is-active" : ""}`}
-                >
+                <div className={`scene-thumb ${activeScene === "about" ? "is-active" : ""}`}>
                   <span className="scene-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="img">
                       <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
                       <path d="M5 20a7 7 0 0 1 14 0" />
                     </svg>
                   </span>
-                  ABOUT
                 </div>
-                <div
-                  className={`scene-thumb scene-thumb--cs ${activeScene === "cs" ? "is-active" : ""}`}
-                >
+                <div className={`scene-thumb ${activeScene === "cs" ? "is-active" : ""}`}>
                   <span className="scene-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="img">
                       <rect x="7" y="7" width="10" height="10" rx="2" />
                       <path d="M4 10h3M4 14h3M17 10h3M17 14h3M10 4v3M14 4v3M10 17v3M14 17v3" />
                     </svg>
                   </span>
-                  CS
                 </div>
-                <div
-                  className={`scene-thumb scene-thumb--creative ${activeScene === "creative" ? "is-active" : ""}`}
-                >
+                <div className={`scene-thumb ${activeScene === "creative" ? "is-active" : ""}`}>
                   <span className="scene-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="img">
                       <path d="m12 20 8-8-4-4-8 8-2 6 6-2Z" />
                       <path d="m14 6 4 4" />
                     </svg>
                   </span>
-                  CREATIVE
                 </div>
-                <div
-                  className={`scene-thumb scene-thumb--film ${activeScene === "film" ? "is-active" : ""}`}
-                >
+                <div className={`scene-thumb ${activeScene === "film" ? "is-active" : ""}`}>
                   <span className="scene-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="img">
                       <rect x="3" y="8" width="18" height="12" rx="2" />
                       <path d="M3 8h18M7 4l2 4M12 4l2 4M17 4l2 4" />
                     </svg>
                   </span>
-                  FILM
                 </div>
               </div>
             </div>
@@ -163,7 +151,6 @@ function Home() {
                   className="scene-link"
                   to="/about"
                   onMouseEnter={() => setActiveScene("about")}
-                  onFocus={() => setActiveScene("about")}
                 >
                   ABOUT
                 </Link>
@@ -171,7 +158,6 @@ function Home() {
                   className="scene-link"
                   to="/cs-projects"
                   onMouseEnter={() => setActiveScene("cs")}
-                  onFocus={() => setActiveScene("cs")}
                 >
                   CS
                 </Link>
@@ -179,7 +165,6 @@ function Home() {
                   className="scene-link"
                   to="/creative-projects"
                   onMouseEnter={() => setActiveScene("creative")}
-                  onFocus={() => setActiveScene("creative")}
                 >
                   CREATIVE
                 </Link>
@@ -187,7 +172,6 @@ function Home() {
                   className="scene-link"
                   to="/film"
                   onMouseEnter={() => setActiveScene("film")}
-                  onFocus={() => setActiveScene("film")}
                 >
                   FILM
                 </Link>
