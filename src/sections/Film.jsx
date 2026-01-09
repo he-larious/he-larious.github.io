@@ -12,6 +12,7 @@ function Film() {
       title: "Featured Edits",
       items: featuredEdits.map((edit) => ({
         title: edit.title,
+        image: edit.image,
         embedUrl: edit.url,
       })),
     },

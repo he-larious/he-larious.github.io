@@ -50,7 +50,7 @@ function ProjectGallery({ title, items, rows }) {
       <div className="project-gallery-layout">
         <div className="project-hero" role="region" aria-live="polite">
           <div className={`project-hero-media ${hasImage || hasEmbed ? "" : "is-fallback"}`}>
-            {hasImage && <img src={activeItem.image} alt={activeItem.title} />}
+            {hasImage && !hasEmbed && <img src={activeItem.image} alt={activeItem.title} />}
             {hasEmbed && (
               <iframe
                 title={activeItem.title}

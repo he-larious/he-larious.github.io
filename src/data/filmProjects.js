@@ -3,11 +3,13 @@ const filmProjects = [
     title: "Into the Shadows (Short Film)",
     description:
       "Credited as Social Media Editor. Produced fan-edit style promos (reels/TikToks) from film footage to align with dystopian themes and drive online engagement.",
+    image: "/assets/film/Into the Shadows.jpg",
+    embedUrl: "https://www.instagram.com/p/C_qsZc9NIQX/embed",
     links: [
       { label: "Watch Film", url: "https://www.youtube.com/watch?v=dERotVauy5k" },
-      { label: "Sample Edit", url: "https://www.instagram.com/p/C_qsZc9NIQX/?utm_source=ig_web_copy_link&igsh=MWt2Z3Zidnh5dDRk" }
     ]
   },
+  
   {
     title: "Social Media Content Creator",
     description:
@@ -27,7 +29,8 @@ const filmProjects = [
     title: "Scream (OT7's Version)",
     description:
       "A comedic parody script reimagining Scream as a Christmas slasher set in New York City, starring my friends.",
-    links: [
+    image: "/assets/film/Scream.jpg",
+      links: [
       { label: "Read Script", url: "https://docs.google.com/document/d/12ivYrz0k293XBm9cCyCbskskl3D4byhwbh_HomtWhYQ/edit?usp=sharing" }
     ]
   }

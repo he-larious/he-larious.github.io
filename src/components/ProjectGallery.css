@@ -19,15 +19,16 @@
   background: var(--color-base);
   box-shadow: var(--scene-shadow-strong);
   display: grid;
-  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
   gap: 2rem;
   padding: 1.4rem;
-  max-height: 320px;
+  max-height: 380px;
 }
 
 .project-hero-media {
   aspect-ratio: 16 / 9;
-  max-height: 220px;
+  max-height: 320px;
+  max-width: 360px;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(164, 133, 235, 0.35);
@@ -82,7 +83,7 @@
 }
 
 .project-hero-description {
-  max-width: 520px;
+  max-width: none;
   color: rgba(245, 245, 245, 0.78);
   font-size: 0.9rem;
 }
@@ -281,7 +282,7 @@
     bottom: 0;
     width: 24px;
     pointer-events: none;
-    z-index: 2;
+    z-index: 0;
   }
 
   .project-strip-row::before {
