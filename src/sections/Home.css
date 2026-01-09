@@ -9,7 +9,7 @@
   background: radial-gradient(
     circle at 50% 50%,
     var(--scene-glow) 0%,
-    var(--scene-bg) 60%,
+    var(--color-base) 60%,
     var(--scene-bg-deep) 100%
   );
   display: flex;
@@ -36,7 +36,7 @@
 .intro-frame--video {
   padding: 0;
   overflow: hidden;
-  background: var(--scene-bg);
+  background: var(--color-base);
 }
 
 .intro-video {
@@ -167,7 +167,7 @@
   aspect-ratio: 16 / 9;
   border: 1px solid var(--scene-accent-strong);
   border-radius: 8px;
-  background: var(--scene-bg);
+  background: var(--color-base);
   overflow: hidden;
   box-shadow: var(--scene-shadow-strong);
   display: flex;
