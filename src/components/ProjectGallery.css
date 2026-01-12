@@ -35,6 +35,12 @@
   background: #050505;
 }
 
+.project-hero-media.is-instagram {
+  aspect-ratio: 9 / 16;
+  max-width: 240px;
+  max-height: 360px;
+}
+
 .project-hero-media img {
   width: 100%;
   height: 100%;
@@ -89,7 +95,7 @@
 }
 
 .project-hero-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.6rem 1.2rem;
@@ -101,6 +107,7 @@
   text-transform: uppercase;
   border: 1px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  width: 100%;
 }
 
 .project-hero-button:hover,
@@ -147,6 +154,7 @@
   -ms-overflow-style: none;
   border: 1px solid rgba(164, 133, 235, 0.35);
   position: relative;
+  z-index: 0;
 }
 
 .project-strip-row::-webkit-scrollbar {
@@ -259,7 +267,7 @@
 
   .project-hero {
     grid-template-columns: 1fr;
-    max-height: none;
+    max-height: 70vh;
     row-gap: 1.4rem;
   }
 
@@ -276,22 +284,6 @@
 
   .project-strip-row::before,
   .project-strip-row::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 24px;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .project-strip-row::before {
-    left: 0;
-    background: linear-gradient(90deg, rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0));
-  }
-
-  .project-strip-row::after {
-    right: 0;
-    background: linear-gradient(270deg, rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0));
+    content: none;
   }
 }

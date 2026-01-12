@@ -22,6 +22,7 @@ function ProjectGallery({ title, items, rows }) {
 
   const hasImage = Boolean(activeItem?.image);
   const hasEmbed = Boolean(activeItem?.embedUrl);
+  const isInstagram = activeItem?.mediaType === "instagram";
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -49,7 +50,9 @@ function ProjectGallery({ title, items, rows }) {
     <section className="project-gallery">
       <div className="project-gallery-layout">
         <div className="project-hero" role="region" aria-live="polite">
-          <div className={`project-hero-media ${hasImage || hasEmbed ? "" : "is-fallback"}`}>
+          <div
+            className={`project-hero-media ${hasImage || hasEmbed ? "" : "is-fallback"} ${isInstagram ? "is-instagram" : ""}`}
+          >
             {hasImage && !hasEmbed && <img src={activeItem.image} alt={activeItem.title} />}
             {hasEmbed && (
               <iframe
