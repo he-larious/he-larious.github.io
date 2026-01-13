@@ -11,14 +11,11 @@
   --color-white-rgb: 255, 255, 255;
   --color-black-rgb: 0, 0, 0;
   --color-charcoal-rgb: 10, 10, 10;
-  --color-ink: #070707;
-  --color-ink-deep: #0a0a0a;
-  --color-ink-panel: #101010;
-  --color-ink-dark: #111;
   --color-deep-rgb: 5, 5, 5;
   --color-ink-rgb: 8, 8, 8;
   --color-glow-rgb: 20, 14, 35;
   --color-accent-soft: #cbb6f3;
+  --color-surface: #141018;
   --scene-glow: #221437;
   --scene-bg-deep: #050505;
   --scene-bg: var(--scene-bg-deep);
@@ -102,3 +99,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
