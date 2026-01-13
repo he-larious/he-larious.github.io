@@ -1,7 +1,7 @@
 const creativeProjects = [
   {
     title: "Processing Projects",
-    description: "A series of creative graphics projects built in Processing, exploring 3D rendering, procedural generation, and animation.",
+    description: "A series of creative graphics projects built in Processing exploring 3D rendering, procedural generation, and animation.",
     image: "/assets/creative/processing.png",
     links: [
       { label: "GitHub", url: "https://github.com/he-larious/Processing-Projects" }

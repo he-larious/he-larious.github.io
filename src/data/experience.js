@@ -21,7 +21,7 @@ const experience = [
     date: "Jun 2023 - Aug 2023",
     role: "ICG Technology Summer Analyst",
     description:
-      "Analyzed 600,000 Citi Bike trips with Tableau and Python, identifying geographic and seasonal trends to optimize station placement and bike redistribution, improving efficiency by 15%. Developed a dashboard to monitor data anomalies during a system migration for 1,000+ users."
+      "Analyzed 600,000 Citi Bike trips with Tableau and Python, identifying geographic and seasonal trends to optimize station placement and bike redistribution. Developed a dashboard to monitor data anomalies during a system migration for 1,000+ users."
   },
   {
     company: "Verint",

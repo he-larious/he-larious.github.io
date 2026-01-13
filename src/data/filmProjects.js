@@ -1,8 +1,7 @@
 const filmProjects = [
   {
     title: "Into the Shadows (Short Film)",
-    description:
-      "Credited as Social Media Editor. Produced fan-edit style reels/TikToks from film footage to align with dystopian themes and drive online engagement.",
+    description: "Credited as Social Media Editor. Produced fan-edit style reels/TikToks from film footage to align with dystopian themes and drive online engagement.",
     image: "/assets/film/Into the Shadows.jpg",
     embedUrl: "https://www.instagram.com/p/C_qsZc9NIQX/embed",
     links: [
@@ -12,8 +11,7 @@ const filmProjects = [
   
   {
     title: "Social Media Content Creator",
-    description:
-      "Built a YouTube channel with 2.5K+ subscribers and 1M+ total views and expanded cross-platform reach (IG 800+, TikTok 100+).",
+    description: "Built a YouTube channel with 2.5K+ subscribers and 1M+ total views and expanded cross-platform reach (IG 800+, TikTok 100+).",
     image: "/assets/film/helarious.png",
     links: [
       { label: "YouTube", url: "https://www.youtube.com/@helarious" },
@@ -23,15 +21,13 @@ const filmProjects = [
   },
   {
     title: "Freelance Video Editor",
-    description:
-      "Editing short-form video content for creators and brands.",
+    description: "Editing short-form video content for creators and brands.",
     image: "/assets/film/freelance.png",
     embedUrl: "https://www.instagram.com/reel/DQzlt3YEa_S/embed/",
   },
   {
     title: "Scream (OT7's Version)",
-    description:
-      "A comedic parody script reimagining Scream as a Christmas slasher set in New York City, starring my friends.",
+    description: "A comedic parody script reimagining Scream as a Christmas slasher set in New York City, starring my friends.",
     image: "/assets/film/Scream.png",
     embedUrl: "https://drive.google.com/file/d/1W9MhNOAfdMrsSDeEhM8aC50h_ZZORc8t/preview",
     links: [

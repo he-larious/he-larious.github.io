@@ -9,8 +9,7 @@ const csProjects = [
   },
    {
     title: "Panem-et-Promptes",
-    description:
-      "A Retrieval-Augmented Generation q&a system where users can ask natural language questions about The Hunger Games.",
+    description: "A Retrieval-Augmented Generation Q&A system where users can ask natural language questions about The Hunger Games.",
     image: "/assets/cs/panem-et-promptes.png",
     links: [
       { label: "GitHub", url: "https://github.com/he-larious/panem-et-promptes" }
