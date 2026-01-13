@@ -1,14 +1,12 @@
 .about {
   --frame-strip-width: 60px;
-  --frame-hole-height: 26px;
-  --frame-hole-gap: 14px;
   width: 70vw;
   margin: 0 auto;
   padding: 3.5rem calc(2.2rem + var(--frame-strip-width)) 4rem;
   position: relative;
   color: var(--color-light-gray);
-  background: #070707;
-  border: 1px solid rgba(164, 133, 235, 0.35);
+  background: var(--color-ink);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.35);
   border-radius: 18px;
   box-shadow: var(--scene-shadow-soft);
   overflow: hidden;
@@ -21,18 +19,18 @@
   top: 0;
   bottom: 0;
   width: var(--frame-strip-width);
-  background-color: #101010;
+  background-color: var(--color-ink-panel);
   background-image:
     repeating-linear-gradient(
       to bottom,
       transparent 0 14px,
-      rgba(164, 133, 235, 0.55) 14px 40px,
+      rgba(var(--color-accent-rgb), 0.55) 14px 40px,
       transparent 40px 70px
     ),
     repeating-linear-gradient(
       to bottom,
       transparent 0 14px,
-      rgba(164, 133, 235, 0.55) 14px 40px,
+      rgba(var(--color-accent-rgb), 0.55) 14px 40px,
       transparent 40px 70px
     );
   background-size: 28px 70px, 28px 70px;
@@ -40,7 +38,7 @@
   background-repeat: repeat-y;
   background-clip: content-box;
   padding: 0 12px;
-  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 0 18px rgba(var(--color-black-rgb), 0.7);
   opacity: 0.98;
   pointer-events: none;
   z-index: 0;
@@ -48,12 +46,12 @@
 
 .about::before {
   left: 0;
-  border-right: 2px solid rgba(164, 133, 235, 0.45);
+  border-right: 2px solid rgba(var(--color-accent-rgb), 0.45);
 }
 
 .about::after {
   right: 0;
-  border-left: 2px solid rgba(164, 133, 235, 0.45);
+  border-left: 2px solid rgba(var(--color-accent-rgb), 0.45);
 }
 
 .about > * {
@@ -76,10 +74,10 @@
 .about-grid,
 .skills-grid {
   --frame-padding-y: 2.6rem;
-  background-color: #0a0a0a;
-  border: 2px solid rgba(164, 133, 235, 0.28);
+  background-color: var(--color-ink-deep);
+  border: 2px solid rgba(var(--color-accent-rgb), 0.28);
   border-radius: 16px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(var(--color-white-rgb), 0.04);
   padding: var(--frame-padding-y) 2.2rem;
   width: 95%;
   margin-left: auto;
@@ -108,7 +106,7 @@
 
 .about .intro {
   max-width: none;
-  color: rgba(245, 245, 245, 0.82);
+  color: rgba(var(--color-light-gray-rgb), 0.82);
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -126,19 +124,11 @@
   grid-template-columns: 80px minmax(0, 1fr);
   gap: 1.2rem;
   align-items: center;
-  background: rgba(8, 8, 8, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  background: rgba(var(--color-ink-rgb), 0.85);
   color: var(--color-light-gray);
-  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 0 18px rgba(var(--color-black-rgb), 0.55);
   padding: 1.2rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.about-card:hover {
-  transform: scale(1.08);
-  border-color: rgba(164, 133, 235, 0.6);
-  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.45);
 }
 
 .about-card-logo {
@@ -147,8 +137,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(13, 13, 13, 0.75);
-  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.35);
+  background: rgba(var(--color-base-rgb), 0.75);
+  box-shadow: inset 0 0 12px rgba(var(--color-black-rgb), 0.35);
 }
 
 .about-card-logo img {
@@ -180,14 +170,14 @@
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(164, 133, 235, 0.85);
+  color: rgba(var(--color-accent-rgb), 0.85);
   white-space: nowrap;
 }
 
 .about-card-content p {
   margin: 0;
   font-size: 0.98rem;
-  color: rgba(245, 245, 245, 0.78);
+  color: rgba(var(--color-light-gray-rgb), 0.78);
 }
 
 .skills-grid {
@@ -212,18 +202,18 @@
 }
 
 .skill-pill {
-  background: rgba(13, 13, 13, 0.7);
-  border: 1px solid rgba(164, 133, 235, 0.35);
+  background: rgba(var(--color-base-rgb), 0.7);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.35);
   border-radius: 999px;
   padding: 0.35rem 0.85rem;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
-  color: rgba(245, 245, 245, 0.8);
+  color: rgba(var(--color-light-gray-rgb), 0.8);
   transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .skill-pill:hover {
-  border-color: rgba(164, 133, 235, 0.7);
+  border-color: rgba(var(--color-accent-rgb), 0.7);
   color: var(--color-dark-gray);
   background-color: var(--color-accent);
 }
@@ -240,10 +230,6 @@
   .about-grid,
   .skills-grid {
     --frame-padding-y: 2.2rem;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
   }
 
   .skills-grid {
@@ -268,8 +254,6 @@
 @media (max-width: 600px) {
   .about {
     --frame-strip-width: 20px;
-    --frame-hole-height: 16px;
-    --frame-hole-gap: 22px;
     padding: 1.6rem calc(0.6rem + var(--frame-strip-width)) 2rem;
   }
 
