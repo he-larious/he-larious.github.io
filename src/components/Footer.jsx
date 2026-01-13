@@ -11,7 +11,7 @@ function Footer() {
         <a href="https://github.com/he-larious" target="_blank" rel="noreferrer">
           <FaGithub size={24} />
         </a>
-        <a href="https://linkedin.com/in/helenahe" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/helena-he/" target="_blank" rel="noreferrer">
           <FaLinkedin size={24} />
         </a>
         <a href="https://www.youtube.com/@helarious" target="_blank" rel="noreferrer">
