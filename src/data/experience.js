@@ -1,11 +1,11 @@
 const experience = [
   {
-    company: "Incoming @ 🤫",
-    logo: "boomboom.avif",
+    company: "Stripe",
+    logo: "/assets/logos/stripe.png",
     date: "Feb 2026 - Present",
     role: "Software Engineer",
     description:
-      "Top secret rn lol."
+      "LPM Partner Success Team"
   },
   {
     company: "Routerr Health",
